@@ -1,0 +1,2255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'pingfang SC', 'helvetica neue', arial, 'hiragino sans gb', 'microsoft yahei ui', 'microsoft yahei', simsun, sans-serif;
+    font-size: 14px;
+}
+
+.page-mainer {
+    flex: 1;
+}
+
+.notice-section {
+    height: 54px;
+    background: #3d485d;
+    color: #fff;
+    z-index: 1;
+}
+
+.notice-container {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.notice-tag {
+    position: relative;
+    height: 22px;
+    padding: 0 8px;
+    background: #0052d9;
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    line-height: 22px;
+    border-radius: 2px;
+    border-bottom-right-radius: 0;
+    margin-right: 20px;
+}
+
+.notice-tag::after {
+    content: "";
+    position: absolute;
+    left: 100%;
+    bottom: 0;
+    border-style: solid;
+    border-width: 3px 4px;
+    border-color: transparent transparent #0052d9 #0052d9;
+}
+
+.notice-title {
+    max-width: calc(100vw - 180px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.notice-more {
+    font-size: 14px;
+    margin-left: 12px;
+}
+
+.notice-more::after {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 10px;
+    margin-left: 6px;
+    background-image: url(https://cloudcache.tencent-cloud.com/qcloud/portal/kit/images/slice/link-arrow.1ebc4b26.svg);
+}
+
+.nav-section {
+    position: absolute;
+    left: 0;
+    top: 54px;
+    width: 100%;
+    height: 62px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    z-index: 1;
+    background-color: #fff;
+}
+
+.nav-section::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+    opacity: .1;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+
+}
+
+.nav-logo {
+    margin-right: 10px;
+    background-image: url(https://cloudcache.tencent-cloud.com/qcloud/portal/kit/images/slice/logo.23996906.svg);
+    width: 78px;
+    height: 18px;
+
+}
+
+.nav-item {
+    padding: 0 8px;
+    cursor: pointer;
+    position: relative;
+    font-weight: 500;
+    font-size: 14px;
+    color: #16181a;
+    line-height: 62px;
+}
+
+.nav-hot {
+    position: absolute;
+    right: -14px;
+    top: 8px;
+    margin-left: 0;
+    box-sizing: border-box;
+    padding: 0 2px;
+    height: 13px;
+    background: #fff;
+    border: 1px solid #f64041;
+    box-shadow: 2px 2px 4px 0 rgba(55, 99, 170, .31);
+    border-radius: 6px;
+    border-bottom-left-radius: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #f64041;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 12px;
+    font-style: normal;
+    cursor: pointer;
+}
+
+
+.nav-hot-text {
+    transform: scale(0.8333333333);
+}
+
+.operation-container {
+    height: 100%;
+    display: flex;
+}
+
+.operation-form-wrapper {
+    width: 160px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-right: 24px;
+}
+
+.operation-form {
+    position: relative;
+    background: rgba(255, 255, 255, .7);
+    padding: 0 40px 0 12px;
+    width: 100%;
+    height: 38px;
+    font-weight: 500;
+    font-size: 14px;
+    color: #98a3b7;
+    line-height: 36px;
+    cursor: pointer;
+    border: 1px solid rgba(155, 166, 183, .4);
+    border-radius: 2px;
+}
+
+
+
+.operation-input {
+    outline: none;
+    border: none;
+    width: 70px;
+}
+
+.operation-button {
+    position: absolute;
+    right: 12px;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+    font-size: 0;
+    line-height: 36px;
+    cursor: pointer;
+    background: transparent;
+    border-width: 0;
+}
+
+.operation-magnifier {
+    background: url(https://cloudcache.tencent-cloud.com/qcloud/portal/kit/images/slice/search.7a49bf02.svg) no-repeat;
+    width: 16px;
+    height: 16px;
+}
+
+.operation-item {
+    margin-right: 14px;
+    font-size: 14px;
+    font-weight: 500;
+    font-size: 14px;
+    color: #16181a;
+    line-height: 62px;
+    cursor: pointer;
+}
+
+.operation-arrow {
+    margin-right: 31px;
+    position: relative;
+    line-height: 62px;
+
+}
+
+
+
+.operation-arrow::after {
+    content: "";
+    position: absolute;
+    right: -17px;
+    top: 50%;
+    margin-top: -6px;
+    width: 12px;
+    height: 12px;
+    background-image: url(https://cloudcache.tencent-cloud.com/qcloud/portal/kit/images/slice/caret.5662ac0b.svg);
+}
+
+.operation-register {
+    height: 62px;
+    padding: 0 20px;
+    font-size: 14px;
+    color: #fff;
+    line-height: 62px;
+    background-color: #0052d9;
+    cursor: pointer;
+
+}
+
+
+.ads-section {
+    margin-bottom: -46px;
+    background-image: url("https://qcloudimg.tencent-cloud.cn/raw/79cee96a29bf56f3cdc6b1fcb1f44ba2.png");
+    transform: translate(0px, 0px);
+    background-position: -331px -45px;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 100%;
+    height: 600px;
+}
+
+.ads-note {
+    width: 220px;
+    position: absolute;
+    top: 92px;
+    left: 41px;
+    min-height: 330px;
+    box-shadow: 8px 8px 20px rgba(55, 99, 170, .1);
+    border-radius: 4px;
+}
+
+.ads-note-item {
+    height: 66px;
+    padding: 0 12px 0 20px;
+    cursor: pointer;
+    color: #181818;
+    display: flex;
+    align-items: center;
+    line-height: 24px;
+    font-size: 16px;
+    font-weight: 400;
+    background: linear-gradient(90deg, #fff 0, hsla(0, 0%, 100%, 0));
+
+}
+
+.note-item-actvie {
+    line-height: 26px;
+    font-size: 17px;
+    font-weight: 500;
+    color: #0052d9;
+}
+
+.note-item-actvie::after {
+    width: 4px;
+    height: 66px;
+    background-color: #0052d9;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.ads-info {
+    padding-left: 311px;
+    padding-top: 158px;
+    padding-right: 488px;
+}
+
+.ads-info-title {
+    margin-bottom: 20px;
+    font-size: 36px;
+    line-height: 44px;
+    color: #181818;
+    font-weight: 500;
+    max-height: 88px;
+    width: 463px;
+}
+
+.ads-info-sub {
+    font-size: 16px;
+    width: 463px;
+    color: #4b5b76;
+    line-height: 24px;
+    max-height: 48px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.ads-info-btn {
+    margin-top: 32px;
+    width: 176px;
+    padding: 0 24px;
+    font-size: 16px;
+    height: 44px;
+    line-height: 42px;
+    margin-right: 20px;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #0052d9;
+    border: 1px solid transparent;
+    outline: 0 none;
+    cursor: pointer;
+    box-shadow: 8px 8px 20px 0 rgba(55, 99, 170, .1);
+}
+
+
+.ads-entry-container {
+    z-index: 1;
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    margin-top: 108px;
+
+
+
+}
+
+.ads-entry {
+    box-shadow: 8px 8px 20px 0 rgba(55, 99, 170, .1), -8px -8px 20px 0 #fff;
+    margin-right: 20px;
+    background-image: linear-gradient(0deg, #fff, #f3f5f8);
+    border: 2px solid #fff;
+    border-radius: 4px;
+    padding: 18px;
+    width: 220px;
+    height: 113.556px;
+
+}
+
+.ads-entry-title-box {
+    margin-bottom: 4px;
+    font-size: 0;
+    font-weight: 500;
+    color: #181818;
+}
+
+.ads-entry-title {
+    font-size: 18px;
+    line-height: 26px;
+
+}
+
+
+.entry-title-icon {
+    display: inline-block;
+    vertical-align: -5.5px;
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+}
+
+.ads-entry-desc {
+    height: 44px;
+    line-height: 22px;
+    font-size: 14px;
+    color: #97a3b7;
+    white-space: wrap;
+}
+
+
+
+.icon-cloud {
+    background: url(https://main.qcloudimg.com/trisys/assets/home/images/hero/entry-cvm.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.icon-free {
+    background: url(https://qcloudimg.tencent-cloud.cn/raw/8633f8de17a940d87048bcab070429b3.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.icon-developer {
+    background: url(https://cloudcache.tencent-cloud.com/qcloud/ui/static/tc_portal_icon/20ae8faa-3321-43eb-bf24-ec8eff0beba1.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.icon-safe {
+    background: url(https://qcloudimg.tencent-cloud.cn/raw/bf59019d5c342a501b349f80e78681f0.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.icon-face {
+    background: url(https://qcloudimg.tencent-cloud.cn/raw/e491c9ef737b77cac1f7d5d1a76a1cb2.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+.product-section {
+    background-image: radial-gradient(50% 41%, #f3f5f8 0, #fff 41%);
+    padding-top: 91.5px;
+}
+
+.product-title-wrapper {
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.product-title {
+    font-weight: 500;
+    font-size: 28px;
+    color: #000;
+    line-height: 48px;
+}
+
+.product-sub {
+    margin-top: 12.5px;
+    font-size: 0;
+}
+
+.product-sub-desc {
+    font-size: 14px;
+    color: #3d485d;
+    line-height: 20px;
+}
+
+.product-sub-more {
+    margin-left: 12px;
+    color: #0052d9;
+    font-size: 14px;
+}
+
+.product-sub-more::after {
+    content: "";
+    background-image: url(https://cloudcache.tencentcs.cn/qcloud/ui/tea-portal-material-portal/build/Main/images/sprite.Main-202301121009.svg);
+    background-position: 96.34146341463415% 65.75342465753424%;
+    background-size: 2833.333333333333% auto;
+    display: inline-block;
+    width: 6px;
+    height: 10px;
+    margin-left: 6px;
+}
+
+.product-tag-container {
+    position: relative;
+    text-align: center;
+    width: 1180px;
+    height: 110px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.product-tag {
+    position: relative;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0 20px 20px;
+    text-align: center;
+    font-size: 16px;
+    color: #3d485d;
+    line-height: 24px;
+    width: 168.569px;
+}
+
+.prodcut-tag-active {
+    color: #0052d9;
+}
+
+.prodcut-tag-active::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-bottom: 4px solid #0052d9;
+    content: "";
+}
+
+.tag-icon-hot {
+    background: url(https://main.qcloudimg.com/trisys/assets/home/images/product/ani-hot.png);
+}
+
+.tag-icon-cal {
+    background: url(https://main.qcloudimg.com/trisys/assets/home/images/product/ani-base.png);
+}
+
+.tag-icon-contain {
+    background: url(https://main.qcloudimg.com/trisys/assets/home/images/product/ani-middleware.png);
+}
+
+.tag-icon-save {
+    background: url(https://main.qcloudimg.com/trisys/assets/home/images/product/ani-storage.png);
+}
+
+.tag-icon-data {
+    background: url(https://main.qcloudimg.com/trisys/assets/home/images/product/ani-database.png);
+}
+
+.tag-icon-net {
+    background: url(https://main.qcloudimg.com/raw/aa866277d1ea20bc4d8471dc6a11957c.png);
+}
+
+.tag-icon-video {
+    background: url(https://main.qcloudimg.com/trisys/assets/home/images/product/ani-video.png);
+}
+
+.tag-icon-safe {
+    background: url(https://main.qcloudimg.com/trisys/assets/home/images/product/ani-safe.png);
+}
+
+.tag-icon-big {
+    background: url(https://main.qcloudimg.com/trisys/assets/home/images/product/ani-big-data.png);
+}
+
+.tag-icon-ai {
+    background: url(https://main.qcloudimg.com/trisys/assets/home/images/product/ani-ai.png);
+}
+
+.tag-icon-develop {
+    background: url(https://main.qcloudimg.com/trisys/assets/home/images/product/ani-developer.png);
+}
+
+.tag-icon-business {
+    background: url(https://main.qcloudimg.com/trisys/assets/home/images/product/ani-app.png);
+}
+
+.tag-icon-thing {
+    background: url(https://main.qcloudimg.com/trisys/assets/home/images/product/ani-iot.png);
+}
+
+.tag-icon-industry {
+    background: url(https://main.qcloudimg.com/trisys/assets/home/images/product/ani-industry.png);
+}
+
+
+.product-tag-icon {
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin: -6px auto 6px;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: top;
+}
+
+.product-cont {
+    background: #f3f5f8;
+    box-shadow: inset 8px 8px 20px 0 rgba(55, 99, 170, .11), inset -8px -8px 20px 0 #fff;
+    padding: 40px;
+    height: 420px;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.product-card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 378px;
+    padding-right: 48px;
+}
+
+.product-card {
+    background-color: #f3f5f8;
+    background-image: url(https://cloudcache.tencentcs.cn/qcloud/ui/tea-portal-material-portal/build/Main/images/recom-bg_938.jpg), linear-gradient(180deg, #f3f5f8, #fff 178px, #fff);
+    background-size: 340px auto, auto;
+    background-position: 100% 0;
+    background-repeat: no-repeat;
+    border: 2px solid #fff;
+    box-shadow: 8px 8px 20px 0 rgba(55, 99, 170, .1), -8px -8px 20px 0 #fff;
+    border-radius: 4px;
+    padding: 24px;
+    height: 160px;
+}
+
+.product-card-title {
+    margin-bottom: 8px;
+    color: #000;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+}
+
+.product-card-sub {
+    font-size: 14px;
+    color: #3d485d;
+    line-height: 22px;
+}
+
+.product-card-btn-box {
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-btn-blue {
+    height: 36px;
+    width: 133.22px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 34px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #0052d9;
+    border: 1px solid transparent;
+    outline: 0 none;
+    cursor: pointer;
+    box-shadow: 8px 8px 20px 0 rgba(55, 99, 170, .1);
+}
+
+.card-btn-white {
+    height: 36px;
+    width: 133.22px;
+    background-color: #fff;
+    color: #43474d;
+    box-shadow: 8px 8px 20px 0 rgba(55, 99, 170, .1), inset 0 4px 20px 0 hsla(0, 0%, 100%, .5);
+    font-size: 14px;
+    line-height: 34px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid transparent;
+    outline: 0 none;
+    cursor: pointer;
+}
+
+.product-note-container {
+    margin: -22px -10px;
+}
+
+.product-note {
+    width: 274px;
+    padding: 22px 10px;
+    vertical-align: top;
+    display: inline-block;
+}
+
+.product-note-title {
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #000;
+    line-height: 24px;
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.product-note-special-box {
+    display: inline-block;
+    margin-left: 14px;
+}
+
+
+.product-note-special {
+    display: inline-block;
+    position: relative;
+    bottom: 1px;
+    padding: 0 8px;
+    height: 22px;
+    font-size: 12px;
+    line-height: 22px;
+    color: #fff;
+    background-color: #f64041;
+    border-radius: 2px;
+    border-bottom-left-radius: 0;
+}
+
+.product-note-special::before {
+    content: "";
+    position: absolute;
+    right: 100%;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-color: transparent #f64041 #f64041 transparent;
+    border-style: solid;
+    border-width: 2px 3px;
+}
+
+.product-note-sub {
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #4b5b76;
+    line-height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.product-note-list {
+    margin-bottom: -8px;
+}
+
+.product-note-item {
+    margin-right: 8px;
+    margin-bottom: 8px;
+    color: #5f7292;
+    border: 1px solid rgba(75, 91, 118, .5);
+    border-radius: 2px;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 8px;
+    height: 22px;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+
+.solution-section {
+    width: 1180px;
+    margin: 60px auto;
+}
+
+.solution-title {
+    margin-bottom: 32px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 28px;
+    color: #000;
+    line-height: 48px;
+}
+
+
+.solution-card-open {
+    box-shadow: 8px 8px 20px rgba(55, 99, 170, .2), -8px -8px 20px #fff;
+    font-size: 0;
+    width: 460px;
+    height: 410px;
+    background: linear-gradient(180deg, #f3f5f8, #fff);
+    display: inline-block;
+    margin-right: 20px;
+    border: 2px solid #fff;
+    overflow: hidden;
+    border-radius: 4px;
+    position: relative;
+    padding: 22px 18px;
+}
+
+.card-open-camera {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 256px;
+    bottom: 0;
+    opacity: .5;
+    z-index: 0;
+}
+
+
+.card-open-title {
+    color: #181818;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    cursor: pointer;
+}
+
+
+
+.card-open-note {
+    margin-top: 12px;
+}
+
+.card-open-item {
+    margin-top: 8px;
+    padding-left: 28px;
+    position: relative;
+    line-height: 22px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 14px;
+    color: #495770;
+}
+
+.card-open-item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 3px;
+    width: 16px;
+    height: 16px;
+    background-image: url(https://cloudcache.tencentcs.cn/qcloud/ui/tea-portal-material-portal/build/Main/images/tpm1-list-blue-hook_db8.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+.card-open-sub {
+    margin-top: 20px;
+    margin-bottom: 12px;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 12px;
+    color: #16181a;
+    letter-spacing: 0;
+    font-weight: 500;
+}
+
+.card-open-tab-container {
+    display: flex;
+}
+
+
+.card-open-tab {
+    width: 120px;
+    height: 50px;
+    margin-right: 16px;
+    padding: 12px;
+    background: #fff;
+    border: 1px solid #e5e8ed;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-douyu {
+    width: 95px;
+    height: 24px;
+    background: url(https://qcloudimg.tencent-cloud.cn/raw/128938875bb3f369cc3d040f2a27a7a1.png);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img-weimeng {
+    width: 95px;
+    height: 24px;
+    background: url(https://qcloudimg.tencent-cloud.cn/raw/0f22247c2ba315f2e61b25d370adce73.png);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.card-open-cont {
+    font-size: 16px;
+    color: #181818;
+    line-height: 22px;
+    display: flex;
+    z-index: 1;
+}
+
+.open-cont-title {
+    opacity: 0.8;
+
+}
+
+.icon-camera {
+    background: url(https://qcloudimg.tencent-cloud.cn/raw/cd7551d9822d19d3392314f36c629379.svg);
+}
+
+.icon-message {
+    background: url(https://qcloudimg.tencent-cloud.cn/raw/011b2cc4be6620abdd53175966cdcd11.svg) no-repeat;
+    margin-left: 16px;
+}
+
+.icon-play {
+    background: url(https://qcloudimg.tencent-cloud.cn/raw/856ae8e3f6fa81170d601186ffded2d0.svg) no-repeat;
+    margin-left: 16px;
+
+}
+
+.card-open-icon {
+    width: 20px;
+    margin-right: 8px;
+    z-index: 1;
+}
+
+.card-open-btn-box {
+    margin-top: 20px;
+    display: flex;
+}
+
+.card-open-btn {
+    margin-right: 20px;
+    width: 200px;
+    height: 36px;
+    font-size: 14px;
+    line-height: 34px;
+    white-space: nowrap;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.open-btn-bule {
+    color: #fff;
+    background-color: #0052d9;
+    box-shadow: 8px 8px 20px 0 rgba(55, 99, 170, .1);
+}
+
+.open-btn-white {
+    background-color: #fff;
+    color: #43474d;
+    box-shadow: 8px 8px 20px 0 rgba(55, 99, 170, .1), inset 0 4px 20px 0 hsla(0, 0%, 100%, .5);
+    z-index: 1;
+}
+
+.solution-card-container {
+    white-space: nowrap;
+}
+
+.solution-card {
+    display: inline-block;
+    height: 410px;
+    margin-right: 20px;
+    width: 160px;
+    border: 2px solid #fff;
+    color: #fff;
+    overflow: hidden;
+    border-radius: 4px;
+    position: relative;
+    box-shadow: 8px 8px 20px rgba(55, 99, 170, .1);
+    padding: 22px 18px;
+}
+
+.solution-card-title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    position: relative;
+    cursor: pointer;
+    color: #fff;
+    z-index: 1;
+}
+
+
+.card-sub-game {
+    background: url(https://qcloudimg.tencent-cloud.cn/raw/93fd89b065698918a5934b3ee5aa4005.png);
+}
+
+.card-sub-code {
+    background: url(https://qcloudimg.tencent-cloud.cn/raw/6c2084b7f203ccf6124923ade737bac9.png);
+}
+
+.card-sub-financial {
+    background: url(https://qcloudimg.tencent-cloud.cn/raw/2f707ff6507545afeb3c49f6cca16f96.png);
+}
+
+.card-sub-teach {
+    background: url(https://qcloudimg.tencent-cloud.cn/raw/05152d2eedad971571bf81358da39c94.jpg);
+}
+
+.solution-card-sub {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 62px 20px 22px;
+    background-position: 0 0;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    font-size: 14px;
+    line-height: 22px;
+    white-space: pre-wrap;
+    width: 152px;
+    font-weight: bold;
+}
+
+.solution-tab-container {
+    font-size: 0;
+    margin: 20px -10px -20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.solution-tab {
+    width: 220px;
+    height: 129.5px;
+    margin: 0 10px 20px;
+    position: relative;
+    padding: 24px 20px;
+    background-image: linear-gradient(180deg, #f3f5f8, #fff);
+    border: 2px solid #fff;
+    box-shadow: 8px 8px 20px rgba(55, 99, 170, .1), -8px -8px 20px #fff;
+    border-radius: 4px;
+}
+
+
+.solution-tab-box {
+    width: 120px;
+}
+
+
+.solution-tab-title {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+    color: #000;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.solution-tab-desc {
+    margin-top: 8px;
+    font-size: 14px;
+    line-height: 22px;
+    color: #4b5b76;
+    opacity: .8;
+    overflow: hidden;
+    max-height: 44px;
+    font-weight: bold;
+}
+
+
+
+.tab-icon-small {
+    background: url(https://qcloudimg.tencent-cloud.cn/raw/c92a7debc16466ddd27a7e5b0c1eb6ef.png);
+}
+
+.tab-icon-big {
+    background: url(https://qcloudimg.tencent-cloud.cn/raw/e9405a43d1c3e68b3e2eb42f6783f987.png);
+}
+
+
+.tab-icon-cloud {
+    background: url(https://qcloudimg.tencent-cloud.cn/raw/77d8ac28ee107e0523b8ca60fe8852d4.png);
+}
+
+
+.tab-icon-safe {
+    background: url(https://qcloudimg.tencent-cloud.cn/raw/6805e8de35b66e7e87fe4d06d3a3d09e.png);
+}
+
+
+.tab-icon-treat {
+    background: url(https://qcloudimg.tencent-cloud.cn/raw/bfbcf8d7614bcd231c16da40ea1d48b5.png);
+}
+
+.tab-icon-pay {
+    background: url(https://qcloudimg.tencent-cloud.cn/raw/4f38122e35629dd3bd3a567251ca03b9.png);
+}
+
+.tab-icon-culture {
+    background: url(https://qcloudimg.tencent-cloud.cn/raw/e44f8613c89741b78886fc6680effaa7.png);
+}
+
+.tab-icon-manufacture {
+    background: url(https://qcloudimg.tencent-cloud.cn/raw/1235bcc5428fbee75c4f97fe3c107389.png);
+}
+
+.tab-icon-affairs {
+    background: url(https://qcloudimg.tencent-cloud.cn/raw/c2e41321fb9197e53d4fdb10dcd773ed.png);
+}
+
+
+.solution-tab-icon {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    bottom: 24px;
+    right: 20px;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: top;
+}
+
+.tab-icon-all {
+    width: 70px;
+    height: 67px;
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+    background: url(https://cloudcache.tencentcs.cn/qcloud/ui/tea-portal-material-portal/build/Main/images/bg-more_01c.png);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+.solution-tab-more {
+    font-size: 14px;
+    line-height: 22px;
+    color: #0052d9;
+    margin-top: 8px;
+    position: absolute;
+    bottom: 24px;
+    left: 20px;
+}
+
+.solution-tab-more::after {
+    content: "";
+    display: inline-block;
+    background: url(https://cloudcache.tencentcs.cn/qcloud/ui/tea-portal-material-portal/build/Main/images/sprite.Main-202301121009.svg);
+    background-position: 96.34146341463415% 65.75342465753424%;
+    background-size: 2833.333333333333% auto;
+    width: 6px;
+    height: 10px;
+    margin-left: 6px;
+    overflow: hidden;
+    vertical-align: 0;
+}
+
+.ecology-section {
+    padding: 60px 20px;
+    background-color: #f5f7fa;
+}
+
+.ecology-secion-wrapper {
+    margin: 0 auto;
+    width: 1180px;
+}
+
+
+.ecology-title {
+    margin-bottom: 32px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 28px;
+    color: #000;
+    line-height: 48px;
+}
+
+.ecology-cell-container {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.ecology-cell {
+    width: 380px;
+    margin-right: 20px;
+    position: relative;
+    padding: 20px;
+    background-image: linear-gradient(180deg, #f3f5f8, #fff);
+    border: 2px solid #fff;
+    box-shadow: 8px 8px 20px rgba(55, 99, 170, .1), -8px -8px 20px #fff;
+    border-radius: 4px;
+}
+
+.ecology-cell-qrcode {
+    cursor: pointer;
+    position: absolute;
+    right: -2px;
+    top: -2px;
+    z-index: 1;
+    content: "";
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background-image: url(https://cloudcache.tencentcs.cn/qcloud/ui/tea-portal-material-portal/build/Main/images/tpm1-ecology2-qr_dd4.svg);
+    background-position: 50%;
+    background-size: 60px;
+    background-repeat: no-repeat;
+}
+
+
+.cell-back-community {
+    background: url(https://qcloudimg.tencent-cloud.cn/raw/c2519f3ebcd5f6cd46caae583cab2d4b.png);
+}
+
+.cell-back-tencent {
+    background: url(https://qcloudimg.tencent-cloud.cn/raw/0a6f6ee43fac0162459fa390ef1b8507.png);
+}
+
+.cell-back-industry {
+    background: url(https://qcloudimg.tencent-cloud.cn/raw/c3fec248ab1457e31049604cb9fd3fc2.png);
+}
+
+.ecology-cell-back {
+    background-position: right 10px top;
+    background-repeat: no-repeat;
+    background-size: auto 180px;
+    opacity: .6;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.ecology-cell-title {
+    margin-bottom: 8px;
+    font-size: 20px;
+    color: #181818;
+    font-weight: 500;
+    line-height: 28px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.ecology-cell-title::after {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-position: 50%;
+    background-size: 16px;
+    background-repeat: no-repeat;
+    margin-left: 4px;
+    background-image: url(https://cloudcache.tencentcs.cn/qcloud/ui/tea-portal-material-portal/build/Main/images/tpm1-ecology2-arrow_e43.svg);
+}
+
+.ecology-cell-tabs {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+}
+
+.cell-tabs-item {
+    margin-right: 8px;
+    margin-bottom: 8px;
+    color: #5f7292;
+    border: 1px solid rgba(75, 91, 118, .5);
+    border-radius: 2px;
+    vertical-align: middle;
+    padding: 0 8px;
+    height: 22px;
+    font-size: 12px;
+    line-height: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.ecology-cell-desc {
+    margin-bottom: 16px;
+    font-size: 14px;
+    color: #4b5b76;
+    line-height: 22px;
+    position: relative;
+    z-index: 1;
+}
+
+.ecology-cell-note {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+}
+
+.cell-note-item {
+    margin-bottom: 8px;
+    width: calc(50% - 4px);
+    padding-left: 24px;
+    color: #4b5b76;
+    line-height: 22px;
+    font-size: 14px;
+    position: relative;
+}
+
+.cell-note-item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 4px;
+    width: 16px;
+    height: 16px;
+    background-image: url(https://cloudcache.tencentcs.cn/qcloud/ui/tea-portal-material-portal/build/Main/images/tpm1-ecology2-check_41f.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+.ecology-cell-link {
+    margin-top: 8px;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.cell-link-item {
+    margin-right: 12px;
+    line-height: 22px;
+    color: #0052d9;
+}
+
+.cell-link-icon {
+    display: inline-flex;
+    align-items: center;
+}
+
+
+
+.cell-link-icon::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url(https://cloudcache.tencentcs.cn/qcloud/ui/tea-portal-material-portal/build/Main/images/tpm1-ecology2-video_6a2.svg);
+    background-position: 50%;
+    background-size: 16px;
+    background-repeat: no-repeat;
+    margin-right: 8px;
+}
+
+.case-section {
+    padding: 60px 0;
+
+}
+
+.case-title {
+    font-weight: 500;
+    font-size: 28px;
+    color: #000;
+    line-height: 48px;
+    text-align: center;
+}
+
+.case-sub {
+    margin-bottom: 32px;
+    margin-top: 12px;
+    text-align: center;
+    font-size: 14px;
+    color: #3d485d;
+    line-height: 20px;
+
+}
+
+.case-sub-link {
+    margin-left: 12px;
+    color: #0052d9;
+    font-size: 14px;
+}
+
+.case-sub-link::after {
+    background-image: url(https://cloudcache.tencentcs.cn/qcloud/ui/tea-portal-material-portal/build/Main/images/sprite.Main-202301121009.svg);
+    background-position: 96.34146341463415% 65.75342465753424%;
+    background-size: 2833.333333333333% auto;
+    display: inline-block;
+    width: 6px;
+    height: 10px;
+    margin-left: 6px;
+    overflow: hidden;
+    vertical-align: 0;
+    content: "";
+
+}
+
+.case-card-container {
+    padding-left: 80px;
+    padding-right: 80px;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+
+.case-card {
+    width: 366px;
+    height: 210px;
+    flex-shrink: 0;
+    background-image: linear-gradient(0deg, #fff, #f3f5f8);
+    box-shadow: 8px 8px 20px 0 rgba(55, 99, 170, .1), -8px -8px 20px 0 #fff;
+    border-radius: 4px;
+    position: relative;
+    z-index: 1;
+    padding: 53px 32px 0;
+    display: flex;
+    align-items: flex-start;
+    margin: 0 12px;
+}
+
+.case-card-logo {
+    width: 40px;
+    margin-right: 20px;
+}
+
+.case-card-cont {
+    position: relative;
+    z-index: 1;
+}
+
+.case-card-cont::before {
+    content: "";
+    position: absolute;
+    left: -12px;
+    top: -27px;
+    z-index: -1;
+    width: 57px;
+    height: 46px;
+    background-image: url(https://cloudcache.tencentcs.cn/qcloud/ui/tea-portal-material-portal/build/Main/images/sprite.Main-202301121009.svg);
+    background-position: 50.442477876106196% 69.0909090909091%;
+    background-size: 298.2456140350877% auto;
+}
+
+
+.card-cont-sentence {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    max-height: 84px;
+    font-size: 16px;
+    color: #293957;
+    text-align: justify;
+    line-height: 24px;
+}
+
+.card-cont-organ {
+    margin-top: 24px;
+    font-size: 16px;
+    color: #293957;
+    text-align: right;
+    line-height: 28px;
+}
+
+.case-tab-container {
+    max-width: 1204px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 20px;
+}
+
+.case-tab {
+    width: 226.39px;
+    vertical-align: top;
+    margin: 0 6px 12px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    box-shadow: 8px 8px 20px 0 rgba(55, 99, 170, .1), -8px -8px 20px 0 #fff, inset 0 4px 20px 0 hsla(0, 0%, 100%, .5);
+    border-radius: 8px;
+}
+
+.case-tab-img {
+    width: 160px;
+    height: 40px;
+
+}
+
+.infra-section {
+    background-color: #f5f7fa;
+    padding: 60px 20px;
+    height: 640px;
+}
+
+.infra-section-wrapper {
+    margin: 0 auto;
+    max-width: 1180px;
+}
+
+.infra-title {
+    font-weight: 500;
+    font-size: 28px;
+    color: #000;
+    line-height: 48px;
+    text-align: center;
+}
+
+.infra-sub {
+    margin-top: 12px;
+    margin-bottom: 32px;
+    text-align: center;
+    font-size: 14px;
+    color: #3d485d;
+    line-height: 20px;
+}
+
+.infra-sub-link {
+    margin-left: 12px;
+    color: #0052d9;
+    font-size: 14px;
+
+}
+
+.infra-sub-link::after {
+    background-image: url(https://cloudcache.tencentcs.cn/qcloud/ui/tea-portal-material-portal/build/Main/images/sprite.Main-202301121009.svg);
+    background-position: 96.34146341463415% 65.75342465753424%;
+    background-size: 2833.333333333333% auto;
+    display: inline-block;
+    width: 6px;
+    height: 10px;
+    margin-left: 6px;
+    overflow: hidden;
+    vertical-align: 0;
+    content: "";
+}
+
+.infra-cont-container {
+    margin-top: 63px;
+    margin-left: 40px;
+    height: 340px;
+
+}
+
+.infra-cont {
+    margin-bottom: 40px;
+}
+
+.infra-cont-title {
+    margin-bottom: 4px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    color: #495770;
+}
+
+.cont-title-number {
+    margin: 0 4px;
+    font-size: 32px;
+    line-height: 40px;
+    color: #0052d9;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.infra-cont-desc {
+    font-size: 14px;
+    line-height: 22px;
+    color: #495770;
+}
+
+.infra-cert-container {
+    width: 1180px;
+    position: relative;
+    z-index: 1;
+    background-image: linear-gradient(0deg, #fff, #f3f5f8);
+    border: 2px solid #fff;
+    box-shadow: 8px 8px 20px 0 rgba(55, 99, 170, .1);
+    border-radius: 4px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.infra-cert {
+    padding: 20px 8px 22px;
+    font-size: 14px;
+    color: #3d485d;
+    text-align: center;
+    line-height: 20px;
+}
+
+.infra-cert-cover {
+    width: 80px;
+    height: 80px;
+    background: #fff;
+    border: 1px solid #e5e8ed;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 6px;
+    overflow: hidden;
+    padding: 15px;
+}
+
+.infra-cert-logo {
+    width: 100%;
+    height: 100%;
+}
+
+.infra-cert-name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    color: #3d485d;
+    text-align: center;
+    line-height: 20px;
+}
+
+.infra-cert-tencent {
+    color: #0052d9;
+}
+
+.infra-cert-tencent::after {
+    background-image: url(https://cloudcache.tencentcs.cn/qcloud/ui/tea-portal-material-portal/build/Main/images/sprite.Main-202301121009.svg);
+    background-position: 96.34146341463415% 65.75342465753424%;
+    background-size: 2833.333333333333% auto;
+    display: inline-block;
+    width: 6px;
+    height: 10px;
+    margin-left: 6px;
+    overflow: hidden;
+    vertical-align: 0;
+    content: "";
+}
+
+.market-section {
+    margin: 154px auto 60px;
+    width: 1180px;
+}
+
+.market-title {
+    font-weight: 500;
+    font-size: 28px;
+    color: #000;
+    line-height: 48px;
+    text-align: center;
+}
+
+.market-sub {
+    margin-top: 12px;
+    margin-bottom: 32px;
+    text-align: center;
+    font-size: 14px;
+    color: #3d485d;
+    line-height: 20px;
+}
+
+.market-sub-link {
+    margin-left: 12px;
+    color: #0052d9;
+    font-size: 14px;
+
+}
+
+.market-sub-link::after {
+    background-image: url(https://cloudcache.tencentcs.cn/qcloud/ui/tea-portal-material-portal/build/Main/images/sprite.Main-202301121009.svg);
+    background-position: 96.34146341463415% 65.75342465753424%;
+    background-size: 2833.333333333333% auto;
+    display: inline-block;
+    width: 6px;
+    height: 10px;
+    margin-left: 6px;
+    overflow: hidden;
+    vertical-align: 0;
+    content: "";
+}
+
+.market-main {
+    display: flex;
+}
+
+.market-info-container {
+    position: relative;
+    padding-top: 25px;
+    flex: 1;
+    min-height: 260px;
+    margin-right: 23px;
+}
+
+.market-info-back {
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: 393px auto;
+    background-position: 100%;
+    background-image: url(https://cloudcache.tencentcs.cn/qcloud/ui/tea-portal-material-portal/build/Main/images/bg_941.png);
+    opacity: .5;
+    z-index: 0;
+
+}
+
+.market-info {
+    max-width: 480px;
+    font-size: 14px;
+    color: #666;
+    line-height: 24px;
+    margin-bottom: 60px;
+}
+
+.market-info em {
+    color: #000;
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+
+.market-list {
+    max-width: 480px;
+    font-size: 0;
+}
+
+.market-item {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+    padding-right: 10px;
+    margin-bottom: 20px;
+    position: relative;
+    padding-left: 28px;
+    font-size: 16px;
+    color: #253554;
+    line-height: 24px;
+}
+
+.info-icon-service {
+    background-image: url(https://cloudcache.tencentcs.cn/qcloud/ui/tea-portal-material-portal/build/Main/images/sprite.Main-202301121009.svg);
+    background-position: 74.02597402597402% 87.14285714285714%;
+    background-size: 1062.5% auto;
+    position: absolute;
+    left: 0;
+    top: 4px;
+    width: 16px;
+    height: 16px;
+}
+
+.info-icon-quality {
+    background-image: url(https://cloudcache.tencentcs.cn/qcloud/ui/tea-portal-material-portal/build/Main/images/sprite.Main-202301121009.svg);
+    background-position: 0% 100%;
+    background-size: 1062.5% auto;
+    position: absolute;
+    left: 0;
+    top: 4px;
+    width: 16px;
+    height: 16px;
+}
+
+.info-icon-client {
+    background-image: url(https://cloudcache.tencentcs.cn/qcloud/ui/tea-portal-material-portal/build/Main/images/sprite.Main-202301121009.svg);
+    background-position: 94.8051948051948% 87.14285714285714%;
+    background-size: 1062.5% auto;
+    position: absolute;
+    left: 0;
+    top: 4px;
+    width: 16px;
+    height: 16px;
+}
+
+.info-icon-refund {
+    background-image: url(https://cloudcache.tencentcs.cn/qcloud/ui/tea-portal-material-portal/build/Main/images/sprite.Main-202301121009.svg);
+    background-position: 84.4155844155844% 87.14285714285714%;
+    background-size: 1062.5% auto;
+    position: absolute;
+    left: 0;
+    top: 4px;
+    width: 16px;
+    height: 16px;
+}
+
+.market-tag-container {
+    width: 660px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: -24px;
+}
+
+.market-tag {
+    margin-left: 24px;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 108px;
+    height: 108px;
+    background-image: linear-gradient(0deg, #fff, #f3f5f8);
+    border: 2px solid #fff;
+    box-shadow: 8px 8px 20px 0 rgba(55, 99, 170, .1), -8px -8px 20px 0 #fff;
+    border-radius: 10px;
+}
+
+.tag-logo-ai {
+    background: url(https://qcloudimg.tencent-cloud.cn/raw/3cc40abb12d2cb2d61f0b3313a8fb3d3.png);
+}
+
+.tag-logo-thing {
+    background: url(https://qcloudimg.tencent-cloud.cn/raw/344ebbdce0c11d8bcefc89813c768f77.png);
+}
+
+.tag-logo-safe {
+    background: url(https://qcloudimg.tencent-cloud.cn/raw/00073cc4281bab2f297dcfd8d007f62d.png);
+}
+
+.tag-logo-base {
+    background: url(https://qcloudimg.tencent-cloud.cn/raw/c8730099d6d8364a3235c211f2e6acbe.png);
+}
+
+.tag-logo-visible {
+    background: url(https://qcloudimg.tencent-cloud.cn/raw/ff5dcf4a9bd764e1509498a967d73bc0.png);
+}
+
+.tag-logo-big {
+    background: url(https://qcloudimg.tencent-cloud.cn/raw/2b6bcfe4bab11d70cccc207864055f90.png);
+}
+
+.tag-logo-sound {
+    background: url(https://qcloudimg.tencent-cloud.cn/raw/55e7e530db6324275584398cfb207463.png);
+}
+
+.tag-logo-sale {
+    background: url(https://qcloudimg.tencent-cloud.cn/raw/190d939adb7fc1d131adf2f1bba6110d.png);
+}
+
+.tag-logo-work {
+    background: url(https://qcloudimg.tencent-cloud.cn/raw/49dad6022b32129b4716d3e7def9d07e.png);
+}
+
+.tag-logo-all {
+    background: url(https://main.qcloudimg.com/trisys/assets/home/images/market/ani/more.png);
+}
+
+.market-tag-logo {
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: top;
+    margin-bottom: 10px;
+}
+
+.market-tag-name {
+    font-size: 14px;
+    color: #253554;
+    line-height: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.panel-section {
+    padding: 0 20px;
+    height: 160px;
+    background: #242933 url(https://cloudcache.tencentcs.cn/qcloud/ui/tea-portal-material-portal/build/Main/images/bg_ebb.jpg) 50% no-repeat;
+    background-size: auto 100%;
+    background-position: center right -200px;
+}
+
+.panel-wrapper {
+    margin: 0 auto;
+    max-width: 1180px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.panel-box {
+    font-size: 20px;
+    color: #fff;
+    line-height: 32px;
+    padding-right: 390px;
+}
+
+.panel-more {
+    margin-top: 12px;
+    width: 126px;
+    height: 36px;
+    color: #fff;
+    background-color: transparent;
+    font-size: 14px;
+    line-height: 34px;
+    white-space: nowrap;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid;
+    border-color: hsla(0, 0%, 100%, .6);
+    cursor: pointer;
+}
+
+.web-sider {
+    position: fixed;
+    z-index: 99;
+    right: 8px;
+    width: 52px;
+    top: 0;
+    height: 100%;
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+}
+
+.sider-pre-sale {
+    margin-top: 8px;
+    background: linear-gradient(180deg, #ff3b3b 0%, #ffa45a 100%);
+    padding: 2px 2px 12px;
+    position: relative;
+    border-radius: 26px;
+    box-shadow: 8px 8px 20px 0 rgba(55, 99, 170, .1);
+    border: 2px solid #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.pre-sale-img {
+    width: 100%;
+    display: block;
+    border-radius: 50%;
+}
+
+.pre-sale-cont {
+    color: #fff;
+    display: block;
+    text-align: center;
+    width: 18px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 8px;
+}
+
+.sider-after-sale {
+    margin-top: 8px;
+    padding: 12px 0;
+    width: 52px;
+    height: 52px;
+    border-radius: 26px;
+    background-image: linear-gradient(0deg, #ffffff 0%, #f3f5f8 100%);
+    box-shadow: 8px 8px 20px 0 rgba(55, 99, 170, .1);
+    border: 2px solid #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    overflow: hidden;
+
+}
+
+.after-sale-img {
+    width: 24px;
+    display: block;
+}
+
+.sider-event {
+    margin-top: 8px;
+    padding: 12px 0;
+    width: 52px;
+    height: 52px;
+    border-radius: 26px;
+    background-image: linear-gradient(0deg, #ffffff 0%, #f3f5f8 100%);
+    box-shadow: 8px 8px 20px 0 rgba(55, 99, 170, .1);
+    border: 2px solid #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    overflow: hidden;
+
+}
+
+.sider-event-img {
+    width: 48px;
+    display: block;
+}
+
+.page-footer {
+    padding: 0 10px;
+    min-width: 320px;
+    background: #f5f7fa;
+}
+
+
+.service-section {
+    font-size: 0;
+    text-align: center;
+    padding: 24px 36px;
+    margin: 0 auto;
+    max-width: 1180px;
+    border-bottom: 1px solid rgba(73, 87, 112, .2);
+    white-space: nowrap;
+}
+
+.service-tag {
+    display: inline-block;
+    width: 312px;
+    vertical-align: top;
+    text-align: left;
+    white-space: nowrap;
+    font-size: 16px;
+    color: #000;
+}
+
+.icon-refund {
+    background: url(https://cloudcache.tencent-cloud.com/qcloud/portal/kit/images/ani-5day.8b4d6e68.png);
+}
+
+.icon-record {
+    background: url(https://cloudcache.tencent-cloud.com/qcloud/portal/kit/images/ani-free.a411eb94.png);
+}
+
+.icon-vip {
+    background: url(https://cloudcache.tencent-cloud.com/qcloud/portal/kit/images/ani-service.a75411e0.png);
+}
+
+.icon-hour {
+    background: url(https://cloudcache.tencent-cloud.com/qcloud/portal/kit/images/ani-time.c32429e2.png);
+}
+
+.service-tag-icon {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    vertical-align: middle;
+    margin-right: 4px;
+    margin-left: -6px;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: top center;
+}
+
+.website-section{
+    position: relative;
+    display: flex;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin: 0 auto;
+    max-width: 1180px;
+    padding: 30px 0;
+    border-bottom: 1px solid rgba(73,87,112,.2);
+}
+
+.website-note-wrapper{
+    flex: 1;
+    width: 1px;
+    margin-left: -10px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.website-note{
+    flex: 1;
+    width: 1px;
+    font-size: 14px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.website-note-title{
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: normal;
+    color: #000;
+}
+
+.website-note-item{
+    display: block;
+    padding: 4px 0;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #495770;
+}
+
+.website-connect{
+    width: 346px;
+}
+
+.website-connect-title{
+    font-weight: normal;
+    font-size: 14px;
+    color: #000;
+    line-height: 22px;
+}
+
+.website-connect-subtitle{
+    font-size: 12px;
+    color: #495770;
+    line-height: 24px;
+    margin-top: 16px;
+}
+
+.website-connect-qrcode{
+    margin-top: 16px;
+}
+
+.connect-qrcode-img{
+    margin-right: 20px;
+    display: inline-block;
+    vertical-align: top;
+    width: 74px;
+    padding: 2px;
+    height: 74px;
+    background-image: linear-gradient(0deg, #fff 0%, #f3f5f8 100%);
+    border: 2px solid #fff;
+    box-shadow: 8px 8px 20px 0 rgba(55,99,170,.1),-8px -8px 20px 0 #fff;
+    border-radius: 4px;
+}
+
+.website-connect-phone{
+    margin-top: 20px;
+}
+
+.connect-phone-title{
+    font-size: 12px;
+    line-height: 22px;
+    font-weight: normal;
+    display: inline;
+    margin-right: 8px;
+    color: #495770;
+}
+
+.connect-phone-number{
+    font-size: 16px;
+    color: #495770;
+    line-height: 24px;
+    font-weight: 500;
+}
+
+.connect-phone-word{
+    font-size: 12px;
+    margin-left: 4px;
+    margin-right: 4px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.website-connect-us{
+    margin-top: 14px;
+    display: block;
+    width: 100%;
+    max-width: 194px;
+    height: 34px;
+    line-height: 34px;
+    background: #0052d9;
+    box-shadow: 8px 8px 20px 0 rgba(55,99,170,.1),-8px -8px 20px 0 #fff;
+    color: #fff;
+    text-align: center;
+}
+
+.blogroll-section{
+    position: relative;
+    min-height: 35px;
+    border-bottom: none;
+    padding-top: 40px;
+    padding-bottom: 66px;
+    margin: 0 auto;
+    max-width: 1180px;
+    padding: 30px 0;
+}
+
+.tencent-logo{
+    position: relative;
+    top: -2px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 90px;
+    height: 16px;
+    background-image: url(https://cloudcache.tencent-cloud.com/qcloud/portal/kit/images/icon-tc.7093cf3c.svg);
+    margin-right: 25px;
+}
+
+.tencent-item{
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 15px;
+    font-size: 12px;
+    line-height: 22px;
+    color: #495770;
+    white-space: nowrap;
+}
+
+.blogroll-tencent-about{
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 15px;
+    font-size: 12px;
+    line-height: 22px;
+    color: #495770;
+    white-space: nowrap;
+}
+
+.blogroll-cont{
+    font-size: 12px;
+    color: #495770;
+    line-height: 20px;
+    margin-top: 20px;
+}
+
+.blogroll-select-container{
+    position: absolute;
+    right: 0;
+    top: 40px;
+    width: 190px;
+}
+
+
+.blogroll-select{
+position: relative;
+display: block;
+padding: 0 30px 0 12px;
+height: 36px;
+border: 2px solid #fff;
+background-image: linear-gradient(0deg, #fff 0%, #f3f5f8 100%);
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+font-size: 12px;
+line-height: 32px;
+color: #495770;
+cursor: pointer;
+box-shadow: 8px 8px 20px 0 rgba(55,99,170,.1);
+}
+
+.blogroll-select-icon{
+    position: relative;
+    top: -1px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+    width: 16px;
+    height: 16px;
+    background-image: url(https://cloudcache.tencent-cloud.com/qcloud/portal/kit/images/icon-earth.280cbaec.svg);
+}
+
+.blogroll-select::after{
+    content: "";
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    margin-top: -2px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 4px 4px 0;
+    border-color: #ccc transparent;
+}
