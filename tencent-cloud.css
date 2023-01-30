@@ -28,7 +28,6 @@ body {
 }
 
 .notice-container {
-    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -42,7 +41,6 @@ body {
     background: #0052d9;
     font-size: 12px;
     color: #fff;
-    text-align: center;
     line-height: 22px;
     border-radius: 2px;
     border-bottom-right-radius: 0;
@@ -67,7 +65,6 @@ body {
 }
 
 .notice-more {
-    font-size: 14px;
     margin-left: 12px;
 }
 
@@ -107,7 +104,6 @@ body {
 .nav-container {
     display: flex;
     align-items: center;
-
 }
 
 .nav-logo {
@@ -158,23 +154,15 @@ body {
 }
 
 .operation-container {
-    height: 100%;
-    display: flex;
-}
-
-.operation-form-wrapper {
-    width: 160px;
-    position: relative;
     display: flex;
     align-items: center;
-    margin-right: 24px;
 }
 
 .operation-form {
     position: relative;
     background: rgba(255, 255, 255, .7);
     padding: 0 40px 0 12px;
-    width: 100%;
+    width: 160px;
     height: 38px;
     font-weight: 500;
     font-size: 14px;
@@ -183,14 +171,14 @@ body {
     cursor: pointer;
     border: 1px solid rgba(155, 166, 183, .4);
     border-radius: 2px;
+    margin-right: 24px;
 }
-
 
 
 .operation-input {
     outline: none;
     border: none;
-    width: 70px;
+    width: 90px;
 }
 
 .operation-button {
@@ -202,8 +190,6 @@ body {
     justify-content: center;
     height: 36px;
     font-size: 0;
-    line-height: 36px;
-    cursor: pointer;
     background: transparent;
     border-width: 0;
 }
@@ -227,8 +213,6 @@ body {
 .operation-arrow {
     margin-right: 31px;
     position: relative;
-    line-height: 62px;
-
 }
 
 
@@ -284,7 +268,6 @@ body {
     color: #181818;
     display: flex;
     align-items: center;
-    line-height: 24px;
     font-size: 16px;
     font-weight: 400;
     background: linear-gradient(90deg, #fff 0, hsla(0, 0%, 100%, 0));
@@ -344,24 +327,18 @@ body {
     margin-right: 20px;
     color: #fff;
     text-align: center;
-    vertical-align: middle;
     background-color: #0052d9;
     border: 1px solid transparent;
-    outline: 0 none;
     cursor: pointer;
     box-shadow: 8px 8px 20px 0 rgba(55, 99, 170, .1);
 }
 
 
 .ads-entry-container {
-    z-index: 1;
     margin-left: 20px;
     display: flex;
     justify-content: center;
     margin-top: 108px;
-
-
-
 }
 
 .ads-entry {
@@ -381,18 +358,17 @@ body {
     font-size: 0;
     font-weight: 500;
     color: #181818;
+    display: flex;
+    align-items: center;
 }
 
 .ads-entry-title {
     font-size: 18px;
     line-height: 26px;
-
 }
 
 
-.entry-title-icon {
-    display: inline-block;
-    vertical-align: -5.5px;
+.ads-entry-icon {
     width: 24px;
     height: 24px;
     margin-right: 12px;
@@ -486,7 +462,6 @@ body {
 
 .product-tag-container {
     position: relative;
-    text-align: center;
     width: 1180px;
     height: 110px;
     margin: 0 auto;
@@ -586,7 +561,7 @@ body {
     background-position: top;
 }
 
-.product-cont {
+.product-main {
     background: #f3f5f8;
     box-shadow: inset 8px 8px 20px 0 rgba(55, 99, 170, .11), inset -8px -8px 20px 0 #fff;
     padding: 40px;
@@ -660,10 +635,10 @@ body {
     font-size: 14px;
     line-height: 34px;
     text-align: center;
-    vertical-align: middle;
     border: 1px solid transparent;
     outline: 0 none;
     cursor: pointer;
+    margin-left: 12px;
 }
 
 .product-note-container {
@@ -671,10 +646,9 @@ body {
 }
 
 .product-note {
+    display: inline-block;
     width: 274px;
     padding: 22px 10px;
-    vertical-align: top;
-    display: inline-block;
 }
 
 .product-note-title {
@@ -688,14 +662,9 @@ body {
     white-space: nowrap;
 }
 
-.product-note-special-box {
-    display: inline-block;
-    margin-left: 14px;
-}
-
-
 .product-note-special {
     display: inline-block;
+    margin-left: 14px;
     position: relative;
     bottom: 1px;
     padding: 0 8px;
@@ -730,18 +699,13 @@ body {
     white-space: nowrap;
 }
 
-.product-note-list {
-    margin-bottom: -8px;
-}
 
 .product-note-item {
     margin-right: 8px;
-    margin-bottom: 8px;
     color: #5f7292;
     border: 1px solid rgba(75, 91, 118, .5);
     border-radius: 2px;
     display: inline-block;
-    vertical-align: middle;
     padding: 0 8px;
     height: 22px;
     font-size: 12px;
@@ -797,7 +761,6 @@ body {
     line-height: 28px;
     cursor: pointer;
 }
-
 
 
 .card-open-note {
@@ -922,7 +885,6 @@ body {
     line-height: 34px;
     white-space: nowrap;
     text-align: center;
-    vertical-align: middle;
     border: 1px solid transparent;
     cursor: pointer;
 }
@@ -1133,7 +1095,6 @@ body {
     height: 10px;
     margin-left: 6px;
     overflow: hidden;
-    vertical-align: 0;
 }
 
 .ecology-section {
@@ -1240,13 +1201,13 @@ body {
     background-image: url(https://cloudcache.tencentcs.cn/qcloud/ui/tea-portal-material-portal/build/Main/images/tpm1-ecology2-arrow_e43.svg);
 }
 
-.ecology-cell-tabs {
+.ecology-cell-tab-container {
     display: flex;
     flex-wrap: nowrap;
     align-items: flex-start;
 }
 
-.cell-tabs-item {
+.ecology-cell-tab {
     margin-right: 8px;
     margin-bottom: 8px;
     color: #5f7292;
@@ -1270,14 +1231,14 @@ body {
     z-index: 1;
 }
 
-.ecology-cell-note {
+.ecology-cell-note-container {
     display: flex;
     flex-wrap: wrap;
     position: relative;
     z-index: 1;
 }
 
-.cell-note-item {
+.ecology-cell-note {
     margin-bottom: 8px;
     width: calc(50% - 4px);
     padding-left: 24px;
@@ -1287,7 +1248,7 @@ body {
     position: relative;
 }
 
-.cell-note-item::before {
+.ecology-cell-note::before {
     content: "";
     position: absolute;
     left: 0;
@@ -1300,13 +1261,13 @@ body {
     background-position: 50%;
 }
 
-.ecology-cell-link {
+.ecology-cell-link-container {
     margin-top: 8px;
     display: flex;
     flex-wrap: nowrap;
 }
 
-.cell-link-item {
+.ecology-cell-link {
     margin-right: 12px;
     line-height: 22px;
     color: #0052d9;
@@ -1321,7 +1282,6 @@ body {
 
 .cell-link-icon::before {
     content: "";
-    display: inline-block;
     width: 16px;
     height: 16px;
     background-image: url(https://cloudcache.tencentcs.cn/qcloud/ui/tea-portal-material-portal/build/Main/images/tpm1-ecology2-video_6a2.svg);
@@ -1422,7 +1382,7 @@ body {
 }
 
 
-.card-cont-sentence {
+.case-card-sentence {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
@@ -1434,7 +1394,7 @@ body {
     line-height: 24px;
 }
 
-.card-cont-organ {
+.case-card-organ {
     margin-top: 24px;
     font-size: 16px;
     color: #293957;
@@ -1454,7 +1414,6 @@ body {
 
 .case-tab {
     width: 226.39px;
-    vertical-align: top;
     margin: 0 6px 12px;
     padding: 20px;
     display: flex;
@@ -1515,7 +1474,6 @@ body {
     height: 10px;
     margin-left: 6px;
     overflow: hidden;
-    vertical-align: 0;
     content: "";
 }
 
@@ -1580,9 +1538,6 @@ body {
     background: #fff;
     border: 1px solid #e5e8ed;
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     margin: 0 auto 6px;
     overflow: hidden;
     padding: 15px;
@@ -1616,7 +1571,6 @@ body {
     height: 10px;
     margin-left: 6px;
     overflow: hidden;
-    vertical-align: 0;
     content: "";
 }
 
@@ -1658,7 +1612,6 @@ body {
     height: 10px;
     margin-left: 6px;
     overflow: hidden;
-    vertical-align: 0;
     content: "";
 }
 
@@ -1882,7 +1835,6 @@ body {
     line-height: 34px;
     white-space: nowrap;
     text-align: center;
-    vertical-align: middle;
     border: 1px solid;
     border-color: hsla(0, 0%, 100%, .6);
     cursor: pointer;
@@ -1906,21 +1858,15 @@ body {
     margin-top: 8px;
     background: linear-gradient(180deg, #ff3b3b 0%, #ffa45a 100%);
     padding: 2px 2px 12px;
-    position: relative;
     border-radius: 26px;
     box-shadow: 8px 8px 20px 0 rgba(55, 99, 170, .1);
     border: 2px solid #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     cursor: pointer;
     overflow: hidden;
 }
 
 .pre-sale-img {
     width: 100%;
-    display: block;
     border-radius: 50%;
 }
 
